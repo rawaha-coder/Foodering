@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Foodering</string>
+    <string name="delivery_favorite_food">Delivery favorite food</string>
+    <string name="foodering_app_logo">Foodering app logo</string>
 </resources>

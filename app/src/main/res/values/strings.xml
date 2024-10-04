@@ -7,8 +7,8 @@
     <string name="next">Next</string>
     <string name="login_in_your_account">Login in your account</string>
     <string name="login">Login</string>
-    <string name="enter_your_login">Enter your login</string>
-    <string name="enter_your_password">Enter your password</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
     <string name="facebook_logo">Facebook logo</string>
     <string name="google_logo">google logo</string>
     <string name="google">Google</string>

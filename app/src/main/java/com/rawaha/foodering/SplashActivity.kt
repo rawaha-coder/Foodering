@@ -3,8 +3,6 @@ package com.rawaha.foodering
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -21,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
 
         lifecycleScope.launch(Dispatchers.Main) {
            delay(3000)
-            val intent = Intent(this@SplashActivity, MainActivity::class.java)
+            val intent = Intent(this@SplashActivity, StartActivity::class.java)
            startActivity(intent)
             finish()
         }

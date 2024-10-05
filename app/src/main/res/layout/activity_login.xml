@@ -5,13 +5,15 @@
     android:id="@+id/layoutLoginActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/activity_background_color"
     tools:context=".LoginActivity">
 
     <ImageView
         android:id="@+id/imageViewLoginActivityLogo"
         android:layout_width="140dp"
         android:layout_height="140dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/activity_background_color"
         android:contentDescription="@string/foodering_app_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +24,7 @@
         android:id="@+id/textViewDFF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="@string/delivery_favorite_food"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/imageViewLoginActivityLogo"
@@ -104,33 +106,26 @@
         android:id="@+id/buttonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="@color/first_color"
         android:paddingStart="32dp"
         android:paddingEnd="32dp"
         android:text="@string/login"
         android:textSize="26sp"
-        app:layout_constraintTop_toBottomOf="@+id/buttonFacebookLogin"
-        tools:layout_editor_absoluteX="146dp" />
-
-    <TextView
-        android:id="@+id/textViewSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/sign_up"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/buttonLogin"
-        app:layout_constraintStart_toStartOf="@+id/buttonLogin"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFacebookLogin" />
 
     <Button
         android:id="@+id/buttonGoogleLogin"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="52dp"
         android:layout_marginTop="24dp"
-        android:drawablePadding="4dp"
-        android:text="Google"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/google_24"
+        android:fontFamily="@font/adlam_display"
+        android:text="@string/google"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/buttonFacebookLogin"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -138,12 +133,30 @@
 
     <Button
         android:id="@+id/buttonFacebookLogin"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="52dp"
         android:layout_marginTop="24dp"
-        android:text="Facebook"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/facebook_24"
+        android:fontFamily="@font/adlam_display"
+        android:text="@string/facebook"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buttonGoogleLogin"
         app:layout_constraintTop_toBottomOf="@+id/textViewLoginWith" />
+
+    <Button
+        android:id="@+id/buttonSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/sign_up"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
 </androidx.constraintlayout.widget.ConstraintLayout>

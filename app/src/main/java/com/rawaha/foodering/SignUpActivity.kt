@@ -6,22 +6,22 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.rawaha.foodering.databinding.ActivityLoginBinding
+import com.rawaha.foodering.databinding.ActivitySignUpBinding
 
-class LoginActivity : AppCompatActivity() {
-    private val binding:ActivityLoginBinding by lazy {
-        ActivityLoginBinding.inflate(layoutInflater)
+class SignUpActivity : AppCompatActivity() {
+
+    private val binding: ActivitySignUpBinding by lazy {
+        ActivitySignUpBinding.inflate(layoutInflater)
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(binding.root)
 
-        binding.buttonSignUp.setOnClickListener{
-            val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
+        binding.buttonAlreadyHaveAccount.setOnClickListener{
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+            finish()
         }
-
-
     }
 }

@@ -9,7 +9,7 @@
     tools:context=".LoginActivity">
 
     <ImageView
-        android:id="@+id/imageViewLoginActivityLogo"
+        android:id="@+id/imageViewSignUpActivityLogo"
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:layout_marginTop="24dp"
@@ -18,35 +18,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/foodering_logo" />
+        app:srcCompat="@drawable/foodering_logo"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
-        android:id="@+id/textViewDFF"
+        android:id="@+id/textViewSignUpDFF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/delivery_favorite_food"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageViewLoginActivityLogo"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewSignUpActivityLogo"
         app:layout_constraintHorizontal_bias="0.529"
-        app:layout_constraintStart_toStartOf="@+id/imageViewLoginActivityLogo"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewLoginActivityLogo" />
+        app:layout_constraintStart_toStartOf="@+id/imageViewSignUpActivityLogo"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSignUpActivityLogo" />
 
     <TextView
-        android:id="@+id/textViewLoginYourAccount"
+        android:id="@+id/textViewSignUpAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/adlam_display"
         android:text="@string/login_in_your_account"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/textViewDFF"
+        app:layout_constraintEnd_toEndOf="@+id/textViewSignUpDFF"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="@+id/textViewDFF"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDFF" />
+        app:layout_constraintStart_toStartOf="@+id/textViewSignUpDFF"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSignUpDFF" />
 
     <EditText
-        android:id="@+id/editTextLoginEmailAddress"
+        android:id="@+id/editTextSignUpEmailAddress"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
@@ -57,9 +58,9 @@
         android:inputType="textEmailAddress"
         android:paddingStart="4dp"
         android:paddingEnd="4dp"
-        app:layout_constraintEnd_toEndOf="@+id/textViewLoginYourAccount"
-        app:layout_constraintStart_toStartOf="@+id/textViewLoginYourAccount"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLoginYourAccount"
+        app:layout_constraintEnd_toEndOf="@+id/textViewSignUpAccount"
+        app:layout_constraintStart_toStartOf="@+id/textViewSignUpAccount"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSignUpAccount"
         tools:ignore="LabelFor" />
 
     <EditText
@@ -74,9 +75,9 @@
         android:inputType="textPassword"
         android:paddingStart="4dp"
         android:paddingEnd="4dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextLoginEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/editTextLoginEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLoginEmailAddress" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextSignUpEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/editTextSignUpEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSignUpEmailAddress" />
 
     <TextView
         android:id="@+id/textViewOr"
@@ -114,47 +115,43 @@
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonFacebookLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonFacebookSignup" />
 
     <Button
-        android:id="@+id/buttonGoogleLogin"
+        android:id="@+id/buttonGoogleSignup"
         android:layout_width="150dp"
         android:layout_height="52dp"
         android:layout_marginTop="24dp"
-        android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/google_24"
         android:fontFamily="@font/adlam_display"
         android:text="@string/google"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@+id/buttonFacebookLogin"
+        app:layout_constraintEnd_toStartOf="@+id/buttonFacebookSignup"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewLoginWith" />
 
     <Button
-        android:id="@+id/buttonFacebookLogin"
+        android:id="@+id/buttonFacebookSignup"
         android:layout_width="150dp"
         android:layout_height="52dp"
         android:layout_marginTop="24dp"
-        android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/facebook_24"
         android:fontFamily="@font/adlam_display"
         android:text="@string/facebook"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonGoogleLogin"
+        app:layout_constraintStart_toEndOf="@+id/buttonGoogleSignup"
         app:layout_constraintTop_toBottomOf="@+id/textViewLoginWith" />
 
-    <Button
+    <TextView
         android:id="@+id/buttonSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="24dp"
-        android:backgroundTint="@color/white"
+        android:fontFamily="@font/adlam_display"
         android:text="@string/sign_up"
-        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -20,4 +20,7 @@
     <string name="name">Name</string>
     <string name="signup_with">Signup with</string>
     <string name="already_have_account">Already have account</string>
+    <string name="choose_your_location">Choose Your Location</string>
+    <string name="choose_location">Choose Location</string>
+    <string name="location_choose">to provide you with the best food experience we need permission to your device location so we can offer local delivery options and special offers.</string>
 </resources>

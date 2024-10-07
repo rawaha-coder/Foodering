@@ -2,11 +2,11 @@ package com.rawaha.foodering
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.rawaha.foodering.databinding.ActivitySignUpBinding
+
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -19,9 +19,20 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonAlreadyHaveAccount.setOnClickListener{
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
+            launchLoginActivity()
         }
+
+        val callback: OnBackPressedCallback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                launchLoginActivity()
+            }
+        }
+        onBackPressedDispatcher.addCallback(this, callback)
+    }
+
+    private fun launchLoginActivity(){
+        val intent = Intent(this@SignUpActivity, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

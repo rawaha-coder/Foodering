@@ -56,4 +56,8 @@ dependencies {
 
     implementation(libs.google.gson)
     implementation(libs.bumptech.glide)
+
+    implementation(libs.denzcoskun)
+
+
 }

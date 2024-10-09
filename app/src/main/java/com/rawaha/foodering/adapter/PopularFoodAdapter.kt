@@ -26,7 +26,7 @@ class PopularFoodAdapter(private val foods: List<PopularFood>): RecyclerView.Ada
     class ViewHolder(private val binding: PopularItemBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(item: PopularFood) {
             binding.tvPopularFoodName.text = item.name
-            binding.tvPopularFoodPrice.text = item.price.toString()
+            binding.tvPopularFoodPrice.text = "${item.price} $"
             binding.imageviewPopularFoodName.setImageResource(item.image)
         }
 

@@ -5,11 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
 import com.rawaha.foodering.R
+import com.rawaha.foodering.adapter.PopularFoodAdapter
+import com.rawaha.foodering.data.PopularFood
 import com.rawaha.foodering.databinding.FragmentHomeBinding
 
 
@@ -51,6 +55,21 @@ class HomeFragment : Fragment() {
             }
 
         })
+
+        val foodList = listOf(
+            PopularFood(name = "Bacon and Cheese Heaven", image = R.drawable.menu1, price = 7.0),
+            PopularFood(name = "Chicago Style Hot Dog", image = R.drawable.menu2, price = 8.0),
+            PopularFood(name = "Classic Beef Burger", image = R.drawable.menu3, price = 6.0),
+            PopularFood(name = "Chili Cheese Dog", image = R.drawable.menu4, price = 7.0),
+            PopularFood(name = "Hawaiian BBQ Dog", image = R.drawable.menu5, price = 8.0),
+            PopularFood(name = "Hawaiian Paradise", image = R.drawable.menu6, price = 9.0)
+        )
+
+        val adapter = PopularFoodAdapter(foodList)
+
+        binding.recyclerViewHome.layoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerViewHome.adapter = adapter
+
     }
 
     companion object {
